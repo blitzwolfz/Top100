@@ -2,7 +2,7 @@
 #v1, supports writing to a CSV file
 
 #Imports
-from publicconfig import reddit as reddit #shutup, i like to have ugly code sometimes
+from config import reddit as reddit #shutup, i like to have ugly code sometimes
 import praw
 import prawcore
 import csv
@@ -16,6 +16,7 @@ def scrapper(subb):
         lst.append(str(submission.title))
         lst2.append(str(submission.score))
     
+    
     lst3 = [alist, lst, lst2]
     return lst3
 
@@ -24,8 +25,10 @@ def writer(alist):
     with open('Top100.csv', 'w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(["Rank", "Name", "Title", "Upvotes"])
-                    for x in range(len(alist)):
+                    print(len(alist))
+                    for x in range(len(alist[0])):
                         writer.writerow([x+1, str(alist[0][x]), str(alist[1][x]), str(alist[2][x])])
+
 
 
 
