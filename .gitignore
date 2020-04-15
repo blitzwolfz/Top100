@@ -1,0 +1,9 @@
+/node_modules
+config.json
+config.prod.json
+/dist
+/Assets
+/src/commands/wars
+/.vscode
+/env
+/__pycache__
