@@ -2,7 +2,7 @@
 #v1, supports writing to a CSV file
 
 #Imports
-from publicconfig import reddit as reddit #shutup, i like to have ugly code sometimes
+from config import reddit as reddit #shutup, i like to have ugly code sometimes
 import praw
 import prawcore
 import csv
