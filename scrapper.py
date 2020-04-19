@@ -2,7 +2,7 @@
 #v1, supports writing to a CSV file
 
 #Imports
-from config import reddit as reddit #shutup, i like to have ugly code sometimes
+from publicconfig import reddit as reddit #shutup, i like to have ugly code sometimes
 import praw
 import prawcore
 import csv
@@ -26,6 +26,7 @@ def writer(alist):
                     writer = csv.writer(file)
                     writer.writerow(["Rank", "Name", "Title", "Upvotes"])
                     print(len(alist))
+                    print(len(alist[0]))
                     for x in range(len(alist[0])):
                         writer.writerow([x+1, str(alist[0][x]), str(alist[1][x]), str(alist[2][x])])
 
